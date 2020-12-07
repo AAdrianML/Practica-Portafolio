@@ -1,0 +1,323 @@
+*{
+	/*para que si yo pongo que algo sea de 70px sea de 70px incluyendo 
+	los margin y paddings*/
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body{
+	background:#fff;
+	font-family: "Open Sans", Sans-serif;
+	font-size: 16px;
+}
+
+.contenedor{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	/*solucionar algunos problemas con float*/
+	overflow: hidden;
+}
+
+/*----------------------HEADER----------------------*/
+header{
+	background:url('../img/bg.jpg') #49A3D6;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-height: 600px;
+}
+
+header .menu{
+	margin: 40px 0;
+	text-align: right;
+}
+
+header .menu a{
+	margin: 0 20px;
+	color: #fff;
+	padding-bottom: 9px; 
+	/*hace referencia al tamanio del body en este caso 16px*/
+	font-size: 1em;
+	display: inline-block;
+	text-decoration: none;
+	/*por el momento lo tengo estrasparente, pero ya con el hover los voy a mostrar*/
+	border-bottom: 2px solid transparent;
+}
+
+header .menu a:hover{
+	border-bottom: 2px solid #fff;
+}
+/*estamos utilizando flixbox para poder centrar el contenido*/
+header .contenedor-texto{
+	display: flex;
+	justify-content: center;
+	margin: 190px 0;
+	align-content: center;
+}
+
+header .contenedor-texto .texto{
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	padding: 20px 60px;
+}
+/*para acceder a los dos h2*/
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2{
+	color: #fff;
+	/*este valor es de los que agarre de la pagina de fonts de gooogle*/
+	font-weight: 300;
+}
+
+header .contenedor-texto .texto .nombre{
+	margin-bottom: 10px;
+	font-size: 50px;
+	line-height: 50px;
+}
+
+header .contenedor-texto .texto .profesion{
+	font-size: 25px;
+	line-height: 25px;
+}
+
+/*----------------------MAIN----------------------*/
+/*con este comando estoy diciendo que este contenedor va a ser el unico que va a tener
+su overflow:visible; por lo tanto todo lo sobrante se va a ver y vamos a lograr ese
+efecto en la imagen*/
+.main .contenedor{
+	overflow: visible;
+}
+
+.main .acerca-de{
+	text-align: center;
+}
+
+.main .acerca-de .foto{
+	margin-top: -60px;
+}
+
+.main .acerca-de .foto img{
+	vertical-align: top;
+	border-radius: 50%;
+	border: 5px solid rgba(255,255,255,0.2);
+}
+
+.main .acerca-de .texto{
+	color: #5a5a5a;
+	font-weight: 600;
+	/*en este caso de 16px*/
+	font-size: 1em;
+	line-height: 30px;
+	width: 80%;
+	margin: 40px auto 60px auto;
+}
+
+.main .acerca-de .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color:#dd820d;
+	text-align: center;
+}
+.main .acerca-de .texto .bold{
+	color:#3895ea;
+	text-decoration: underline;
+}
+
+.main .trabajos{
+	background: #f2f2f2;
+	padding: 60px 0;
+}
+
+.main .trabajos .contenedor{
+	/*esconder lo sobrante*/
+	overflow: hidden;
+}
+
+.main .trabajos .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color:#323068;
+	text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo{
+	width: 23%;
+	margin-bottom: 40px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb{
+	/*la foto va a tener el 100% del espacio de ese 23% que le toca*/
+	width: 100%;
+	margin-bottom:10px; 
+}
+.main .trabajos .contenedor-trabajos .trabajo .thumb img{
+	/*la foto va a tener el 100% del espacio de ese 23% que le toca*/
+	width: 100%;
+	vertical-align: top;
+	border-radius:3px ;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion{
+	text-align: center;
+	/*color:#;*/
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre{
+	font-weight: 700;
+	color:#3895ea;
+	margin-bottom:10px; 
+}
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria{
+	font-size: 14px;
+	color:#636363 ;
+}
+
+a{
+	text-decoration: none;
+}
+/*----------------------FOOTER----------------------*/
+
+footer .contacto{
+	padding: 60px;
+}
+
+footer .contacto .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color:#3895ea;
+	text-align: center;
+}
+
+footer .contacto .formulario{
+	display: flex;
+	flex-wrap: wrap;
+	/*separa el espacio entre cada documento*/
+	justify-content: space-between;
+}
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea{
+	border: 2px solid #cecece;
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-size: 20px;
+	color:#a4a4a4;
+	/*quitar la linea por defecto del navegador cuando hago click sobre ella*/
+	outline: none;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"] {
+	width: 49%;
+	margin-bottom: 15px;
+}
+footer .contacto .formulario textarea{
+	width:100%;
+	height:100px;
+	min-width:100%;
+	max-width::100%;
+	min-height:100px;
+	max-height:300px;
+	margin-bottom: 15px;
+}
+footer .contacto .formulario .boton{
+	/*centrar*/
+	margin: auto;
+	background: #389aea;
+	color:#fff;
+	border:none;
+	border-radius: 3px;
+	padding: 15px 40px;
+	/*cambiar cursor cuando esta en el boton*/
+	cursor: pointer;
+}
+
+footer .contacto .formulario .boton:hover{
+	background:#387bea ;
+}
+
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus{
+	border: 2px solid #3895ea;
+}
+
+
+footer .redes-sociales{
+	background: #1e2b38;
+	padding: 60px 0;
+}
+footer .redes-sociales .contenedor{
+	display: flex;
+	justify-content: center;
+}
+
+footer .redes-sociales a{
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	display: block;
+	padding: 15px 0;
+	border-radius: 3px;
+	font-size: 30px;
+	margin: 0 20px;
+}
+
+footer .redes-sociales .twitter:hover{
+	background: #1da1f2;
+}
+footer .redes-sociales .facebook:hover{
+	background: #3b5998;
+}
+footer .redes-sociales .youtube:hover{
+	background: #ff0000;
+}
+footer .redes-sociales .git:hover{
+	background: #4078c0;
+}
+footer .redes-sociales .instagram:hover{
+	background: #c13584;
+}
+
+
+/*-----------------------adaptable a telefonos--------------------------*/
+/*media queries-------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+	header .menu{
+		text-align: center;
+	}
+
+	.main .trabajos .contenedor-trabajos .trabajo{
+		width: 46%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header .contenedor-texto .texto .nombre{
+		font-size: 35px;
+	}
+	header .contenedor-texto .texto .profesion{
+		font-size: 18px;
+	}
+	footer .redes-sociales .contenedor {
+		/*para que se puedan poner unos debajo de otros*/
+		flex-wrap: wrap;
+		padding: 20px 0;
+	}
+}
